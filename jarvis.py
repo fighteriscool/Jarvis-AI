@@ -1,16 +1,16 @@
-import pyttsx3
+import pyttsx3 # pip install pyttsx3
 import datetime 
-import speech_recognition as sr
-import wikipedia
+import speech_recognition as sr #pip install SpeechRecognition
+import wikipedia # pip install wikipedia
 import smtplib
 
 engine = pyttsx3.init()
 
-def speak(audio):
+def speak(audio): #deifning the speak function
     engine.say(audio)
     engine.runAndWait()
 
-def time_():
+def time_(): #defining the time function
     speak("the current time is")
     Time=datetime.datetime.now().strftime("%I:%M:%S") # for 12-hour clock
     speak(Time)
