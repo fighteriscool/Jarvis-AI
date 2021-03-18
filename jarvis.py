@@ -10,7 +10,7 @@ def speak(audio): #deifning the speak function
     engine.say(audio)
     engine.runAndWait()
 
-def time_(): #defining the time function
+def time_(): #defining the time function 
     speak("the current time is")
     Time=datetime.datetime.now().strftime("%I:%M:%S") # for 12-hour clock
     speak(Time)
@@ -46,10 +46,10 @@ def TakeCommand():
 
         print("Listening...")
         r.pause_threshold = 1
-        audio = r.listen(source, timeout=100)
+        audio = r.listen(source, timeout=3)
     try:
         print("Recognizing...")
-        query = r.recognize_google(audio, language='en-pk')
+        query = r.recognize_google(audio, language='en-uk')
         print(query)
         
     except Exception as e:
